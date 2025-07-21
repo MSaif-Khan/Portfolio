@@ -1,3 +1,100 @@
+
 body{
-    background-color: lightgray;
+    max-width: 900px;
+    margin-top: 40px;
+    background-color:#ffffff;
+    /* background-image: url(RSCO-Uncoated-Matchbook\ copy\ copy\ copy.png); */
+    /* background-size: 250px, 250px; */
+    background-image: linear-gradient(161deg, rgba(167, 167, 167, 0.371) 0%, #ffffff 43%, #ffffff 100%);
+    min-height: 100vh;
+  
+}
+
+section img{
+    max-width: 900px;
+    height: auto;
+}
+
+#IntroContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
+    max-width: 900px;
+}
+
+#IntroPortrait{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+ 
+}
+
+#IntroPortrait img{
+    width:175px;
+    height: auto;
+    rotate: 5deg;
+}
+
+.image-btn {
+  position: relative;
+  display: inline-block;
+  width: 200px; /* adjust based on your image */
+  height: 60px; /* adjust based on your image */
+  text-decoration: none;
+  color: black; /* or whatever text color you want */
+  font-weight: 400;
+}
+
+.image-btn img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.btn-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  pointer-events: none; /* so clicking works properly on link */
+}
+
+/* FONTS */
+
+h1{
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:E7D8C9;
+}
+
+.smallerFont {
+    font-weight:300;
+    font-size: 45px;
+    max-width: 900px;
+    color: rgb(0, 0, 0);
+    padding-bottom: 20px;
+}
+
+.bigFont {
+   font-weight:700;
+    font-size: 90px;
+    max-width: 900px;
+    background: -webkit-linear-gradient(285deg, #f1afb3 0%,  #e7b1da 31%,  #89b1f3 64%,  #92bff3 84%, #80b4f4 100% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body{
+    font-family: Roboto, sans-serif;
+    font-weight:400;
+    font-size: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:E7D8C9;
+    color: rgb(0, 0, 0);
 }
