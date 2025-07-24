@@ -1,15 +1,16 @@
-const button = document.querySelector('.image-btn');
-const img = document.getElementById('button-img');
+const staticImg = 'Media/Button Paper.png';
 
-const staticImg = 'Button Paper.png';
-const animatedGif = 'ButtonHover2.gif';
+const buttons = document.querySelectorAll('.image-btn');
 
-button.addEventListener('mouseenter', () => {
-   img.src = animatedGif;});
+buttons.forEach(button => {
+  const img = button.querySelector('img');
+  const hoverGif = button.dataset.hover;
 
- button.addEventListener('mouseleave', () => {
-   img.src = staticImg;
+  button.addEventListener('mouseenter', () => {
+    img.src = hoverGif;
   });
 
-
-
+  button.addEventListener('mouseleave', () => {
+    img.src = staticImg;
+  });
+});
