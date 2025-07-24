@@ -136,6 +136,11 @@ body{
 
 
 /* Body of the website */
+#IntroPortrait img{
+    width:190px;
+    height: auto;
+    rotate: 3deg;
+}
 
 
 body{
@@ -145,6 +150,7 @@ body{
     background-color:#ffffff;
     background-image: linear-gradient(161deg, rgba(167, 167, 167, 0.371) 0%, #ffffff 43%, #ffffff 100%);
     min-height: 100vh;
+    text-align: center;
     
 }
 
@@ -231,16 +237,17 @@ footer {
 /* FONTS */
 
 h1{
-    text-align: left;
+    text-align: center;
     font-family: Roboto, sans-serif;
     max-width: 700px;
+    padding-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     background-color:E7D8C9;
 }
 
 h2{
-    text-align: left;
+    text-align: center;
     font-family: Roboto, sans-serif;
     font-weight: 300;
     max-width: 700px;
