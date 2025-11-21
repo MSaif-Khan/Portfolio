@@ -114,17 +114,42 @@
     </body>
 
     <footer>
-        <p class="contact-me">If you like what you see or have any further questions please don’t hesitate to contact me.</p>
-                <div id="RedirectButtons">
-                    <a class="image-btn" href="mailto:khan.saif02@outlook.com" target="_blank" data-hover="Media/Purple-hover-150.gif">
-                    <span class="btn-text">Email me</span>
-                    <img id="button-img2" src="Media/Button Paper.png" alt="Paper textured button image">
-                    </a>
-                    <a class="image-btn" href="https://www.linkedin.com/in/saifkhan00/" target="_blank" data-hover="Media/Blue-Hover-150.gif">
-                    <span class="btn-text">LinkedIn</span>
-                    <img id="button-img2" src="Media/Button Paper.png" alt="Paper textured button image">
-                    </a>
-    </footer>
+            <div class="footer-inner">
+                <!-- Row 1: Contact/Social -->
+                <div class="footer-social">
+                    <p>Contact me</p>
+                    <div class="social-links">
+                        <a id="email-button" href="url">
+                            <img src="Media/Mail.svg" alt="Email Icon" />
+                            <span class="sr-only">Email me</span>
+                        </a>
+                        <a id="linkedin-button" href="https://www.linkedin.com/in/saifkhan00/">
+                            <img src="Media/Linkedin.svg" alt="Linkedin Icon" />
+                            <span class="sr-only">Linkedin</span>
+                        </a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- Row 2: Footer bottom -->
+                <div class="footer-bottom">
+                    <div class="footer-left">
+                        <div class="footer-logo">
+                            <img src="Media/MSK.svg" alt="MSK Logo">
+                            <!-- <p>Mohammed Saif Khan</p> -->
+                        </div>
+
+                        <nav class="footer-nav">
+                            <!-- <a href="">Home</a>
+                            <a href="">About me</a> -->
+                        </nav>
+                    </div>
+                    <p class="footer-copy">© <span id="year"></span> MSK</p>
+                </div>
+            </div>
+        </footer>
+
 
     <script src="script.js"></script>
 </html>

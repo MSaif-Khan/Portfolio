@@ -1,0 +1,619 @@
+/* =========================================================
+   1. CSS VARIABLES
+========================================================= */
+:root {
+  --color--background: white;
+  --font--satoshi: Satoshi, sans-serif;
+  --color--fontgradient: #000;
+  --text-size--regular: 1rem;
+  --heading--h1: 5rem;
+  --heading--h2-hero: 2.75rem;
+  --heading--h3: 1.5rem;
+  --heading--h4: 1.375rem;
+  --heading--h5: 1.25rem;
+  --heading--h6: 1.125rem;
+  --text-size--medium: 1.4rem;
+  --text-size--display: 13.125rem;
+  --color--button: #151515;
+  --color--primary: #acd5fb;
+  --text-size--small: .875rem;
+  --color--card: white;
+  --text-size--large: 1.7rem;
+  --text-size--huge: 3.5rem;
+  --border--radius: .2rem;
+
+  /* layout vars */
+  --page-width: 1200px;
+  --side-pad: 120px;
+  --cols: 20;
+  --col-w: calc(var(--page-width) / var(--cols));
+  --header-h: 100px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================================================
+   2. FONT FACES
+========================================================= */
+@font-face {
+  font-family: Satoshi;
+  src: url("https://cdn.prod.website-files.com/68470de93b7fdb1d8ff5d04c/68470de93b7fdb1d8ff5d0b0_Satoshi-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url("https://cdn.prod.website-files.com/68470de93b7fdb1d8ff5d04c/68470de93b7fdb1d8ff5d0b5_Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url("https://cdn.prod.website-files.com/68470de93b7fdb1d8ff5d04c/68470de93b7fdb1d8ff5d0b2_Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Satoshi;
+  src: url("https://cdn.prod.website-files.com/68470de93b7fdb1d8ff5d04c/68470de93b7fdb1d8ff5d0b3_Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================================
+   3. RESET & BASE STYLES
+========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color--background);
+  background-image: url("https://cdn.prod.website-files.com/68470de93b7fdb1d8ff5d04c/6867e6c77aeea41bed35bcdc_18a76cdce18f055302ee9aec7eebefc5_RSCO-Uncoated-Matchbook%20Edited.png");
+  background-position: 0 0;
+  background-size: 250px 250px;
+  font-family: var(--font--satoshi);
+  color: var(--color--fontgradient);
+  font-size: var(--text-size--regular);
+  line-height: 1.5;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   4. TYPOGRAPHY
+========================================================= */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
+h1 { font-size: var(--heading--h1); margin-top: 20px; }
+h2 { font-size: var(--heading--h2-hero); margin-top: 20px; line-height: 1.2; }
+h3 { font-size: var(--heading--h3); margin: 20px 140px; text-align: center; }
+h4 { font-size: var(--heading--h4); }
+h5 { font-size: var(--heading--h5); }
+h6 { font-size: var(--heading--h6); }
+
+a {
+  color: var(--color--fontgradient);
+  text-decoration: none;
+}
+
+/* =========================================================
+   5. LAYOUT CONTAINERS
+========================================================= */
+.w-layout-blockcontainer {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  display: block;
+  padding-top: 2rem;
+}
+
+/* =========================================================
+   5. WEBSITE NAV
+========================================================= */
+
+.web-navigation{
+  display: grid;
+  grid-template-columns: 0.05fr 0.1fr 0.2fr 0.1fr 0.2fr 0.1fr 0.05fr;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+    background-color: #fff;
+  background-image: linear-gradient(0deg, #a7a7a73d, #f3f3f3);
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.web-nav-left{
+  grid-column: 2;
+}
+
+.web-nav-centre{
+  grid-column: 4;
+}
+
+.web-nav-right{
+  grid-column: 6;
+}
+
+/* =========================================================
+   6. HERO SECTION
+========================================================= */
+.hero {
+  background-color: #fff;
+  background-image: linear-gradient(0deg, #a7a7a73d, #fff 43%, #fff);
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.hero-content-container {
+  padding: 0px 0px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#hero-image-container {
+  /* box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 5px 2px #CFCFCF; */
+}
+
+#hero-content-container-image {
+  max-width: var(--page-width);
+  border-radius: 20px;
+  /* box-shadow: inset 0 0 5px 2px #CFCFCF; */
+}
+
+.hero-div-grid {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  column-gap: 20%;
+  grid-row-gap: 67px;
+  width: 98%;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.hero-div-grid img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-heading{
+  color: #666666;
+  font-family: var(--font--satoshi);
+  font-size: var(--heading--h1);
+  line-height: 1.1;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* =========================================================
+   7. PAGE LAYOUT (GRID)
+========================================================= */
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 336px 1fr; /* Sidebar fixed, main flexible */
+  gap: 30px;
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-bottom: 4rem;
+}
+
+
+/* ======================================
+   SIDEBAR SECTION – COMPLETE (Book-tab aesthetic, bounded + sticky header)
+====================================== */
+
+  .sidebar {
+  grid-column: 1;
+  position: sticky;
+  top: var(--header-h);
+  height: calc(100vh - var(--header-h));
+}
+  
+  /* Sidebar container is always visible */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* === INNER FLEX LAYOUT === */
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Creates gap between header and nav */
+  align-items: stretch;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* === SIDEBAR HEADER (always visible, sticky) === */
+.sidebar-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: transparent;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 0 1.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: Left;
+  opacity: 1; /* Always visible */
+}
+
+.company-name {
+  font-size: large;
+  font-weight: 600;
+}
+
+.project-descriptor{
+  font-size: medium;
+  font-weight: 400;
+}
+
+.sidebar-header img,
+.sidebar-header .aside-header-logo {
+  display: block;
+  max-width: 100%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+/* === SIDEBAR NAVIGATION (animated) === */
+.sidebar-nav {
+  flex-grow: 0; /* Don't stretch to fill space */
+  overflow-y: auto;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+  width: 80%; /* Changed from max-width */
+  
+  /* Animation for nav only */
+  opacity: 0;
+  transform: translateY(-30px);
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+/* Nav fades in once visible */
+.sidebar-nav.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 14px;
+}
+
+/* --- Sticky button base --- */
+.sidebar .Description {
+  position: relative;
+  display: block;
+  padding: 14px 0px 14px 100px; /* left offset for tab feel */
+  color: var(--color--fontgradient);
+  font-weight: 400;
+  font-size: var(--text-size--regular);
+  text-decoration: none;
+  text-align: left;
+  transform-origin: center;
+  transition:
+    transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+    box-shadow 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform, box-shadow;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* --- Paper grain texture overlay --- */
+.sidebar .Description::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  opacity: 0.08;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* --- Left shaded strip (tab edge) --- */
+.sidebar .Description::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  opacity: 0.5; /* softer shading */
+}
+
+/* --- Each sticky colour --- */
+.sticky1 > a.Description { background-color: #E4FB97; }
+.sticky2 > a.Description { background-color: #FAD3D6; }
+.sticky3 > a.Description { background-color: #FFEA9A; }
+.sticky4 > a.Description { background-color: #A7C8FB; }
+
+/* --- Left shading per sticky --- */
+.sticky1 > a.Description::after { background-color: #cde670; }
+.sticky2 > a.Description::after { background-color: #f7bfc3; }
+.sticky3 > a.Description::after { background-color: #f7db63; }
+.sticky4 > a.Description::after { background-color: #8bb3ef; }
+
+/* Individual Card Rotations */
+.sticky1 { rotate: -1.84deg; }
+.sticky2 { rotate: 0deg; }
+.sticky3 { rotate: 0.13deg; }
+.sticky4 { rotate: 1.84deg; }
+
+/* --- Hover wiggle animation --- */
+@keyframes sidebar-wiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-2deg) scale(1.05); }
+  75% { transform: rotate(2deg) scale(1.05); }
+}
+
+.sidebar .Description:hover {
+  animation: sidebar-wiggle 0.45s ease-in-out;
+  cursor: pointer;
+}
+
+/* --- Active section (scales slightly) --- */
+.sidebar .Description.active {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* --- Non-active buttons revert smoothly --- */
+.sidebar .Description:not(.active) {
+  transform: scale(1);
+}
+
+/* --- Wiggle animation for Back to Top at page bottom --- */
+@keyframes sidebar-bounce {
+  0%, 100% { transform: scale(1.1) rotate(0deg); }
+  25% { transform: scale(1.12) rotate(-3deg); }
+  50% { transform: scale(1.15) rotate(3deg); }
+  75% { transform: scale(1.12) rotate(-2deg); }
+}
+
+.sticky4 > a.Description.wiggle {
+  animation: sidebar-bounce 0.7s ease-in-out;
+}
+
+
+/* =========================================================
+   9. MAIN CONTENT
+========================================================= */
+/* .main-content {
+  grid-column: 5 / span 14;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: calc(var(--header-h) + 40px);
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 10px;
+} */
+
+.main-content {
+  grid-column: 2;
+  background: #fff;
+  border-radius: 10px;
+  padding-top: calc(var(--header-h) + 40px);
+  min-height: 100vh;
+}
+
+.main-content section {
+  margin-bottom: 80px;
+  scroll-margin-top: calc(var(--header-h) + 40px);
+}
+.main-content section:focus-within {
+  outline: 3px solid var(--color--primary);
+}
+
+/* =========================================================
+   10. INSIGHTS
+========================================================= */
+.insight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1640px;
+}
+.insight-div-grid {
+  display: grid;
+  grid-column-gap: 67px;
+  grid-row-gap: 67px;
+  grid-template-columns: 30% 50%;
+  width: 100%;
+  max-width: 1640px;
+  padding: 120px 120px;
+  margin: 0 auto;
+}
+.insight-summary-container {
+  min-height: 175px;
+  background-color: #F2F2F2;
+  box-shadow: inset 0 0 5px 2px #CFCFCF;
+  border-radius: 20px;
+  display: inline-flex;
+}
+.insight-summary-text {
+  list-style: none;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+/* =========================================================
+   11. FOOTER
+========================================================= */
+footer {
+  background-color: #fff;
+  background-image: linear-gradient(0deg, #a7a7a73d, #fff 43%, #f3f3f3);
+  width: 100%;
+  padding: 30px 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== Row 1: "Contact me" + Icons ===== */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* spacing between "Contact me" and icons */
+}
+
+.footer-social p {
+  margin: 0;
+  line-height: 1;
+  font-size: var(--text-size--medium);
+  font-weight: 400;
+  color: #434343;
+  padding-left: 20px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links a img {
+  width: 26px;
+  height: 26px;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.social-links a:hover img {
+  opacity: 1;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  width: 100%;
+  opacity: 1; /* ensure visible */
+}
+
+/* ===== Row 2: Logo + Nav (Left) | Copyright (Right) ===== */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* space between logo and nav */
+  padding-left: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  max-width: 80px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-nav a {
+  color: #434343;
+  font-size: var(--text-size--regular);
+  font-weight: 400;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-nav a:hover {
+  opacity: 0.7;
+}
+
+.footer-copy {
+  font-size: var(--text-size--regular);
+  font-weight: 400;
+  color: #434343;
+  margin: 0;
+  padding-right: 20px;
+}
+
+
+/* =========================================================
+   12. UTILITIES
+========================================================= */
+.text-size-medium { font-size: var(--text-size--medium); line-height: 1.3; }
+.text-size-large { font-size: var(--text-size--large); }
+.text-size-small { font-size: var(--text-size--small); line-height: 1.5; }
+.text-weight-medium { font-weight: 500; }
+.text-weight-light { font-weight: 300; }
+
+
