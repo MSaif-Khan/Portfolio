@@ -7,7 +7,7 @@
   --heading--h1: 5rem;
   --heading--h2-hero: 2.75rem;
   --heading--h3: 1.5rem;
-  --heading--h4: 1.375rem;
+  /* --heading--h4: 1.375rem;   */
   --heading--h5: 1.25rem;
   --heading--h6: 1.125rem;
   --text-size--medium: 1.4rem;
@@ -33,7 +33,6 @@
   white-space: nowrap;
   border: 0;
 }
-
 
 /* Font Faces */
 @font-face {
@@ -102,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: var(--heading--h1);
-    margin-top: 20px;
+    /* margin-top: 20px; */
     /* line-height: 44px; */
 }
   
@@ -198,7 +197,8 @@ li {
   background-color: #fff;
   background-image: linear-gradient(0deg, #a7a7a73d, #fff 43%, #fff);
   margin-bottom: 30px;
-  padding: 40px 0;
+  padding-top: 10px;
+  padding-bottom: 40px;
   box-shadow: 0 2px 20px 7px #00000082;
   width: 100%;
 }
@@ -231,8 +231,13 @@ li {
   justify-content: flex-start;
 }
 
+.hero-heading {
+  line-height: 1.1;
+  margin-top: 0;
+}
+
 /* Text Styles */
-.h1-intro {
+.hero-heading .h1-intro {
   text-align: left;
   font-weight: 300;
   font-size: 45px;
@@ -243,19 +248,8 @@ li {
   margin: 0; /* Remove default margin */
 }
 
-._101-hero-para {
-  font-size: var(--text-size--large);
-  font-weight: 300;
-  margin-top: 80px;
-  margin-bottom: 0;
-}
-
-.hero-para-intro {
-  font-size: var(--text-size--large);
-}
-
 /* FIXED: Main heading with gradient - removed text cropping */
-.heading-12 {
+.hero-heading .h1-name {
   color: var(--color--primary);
   font-family: Satoshi, sans-serif;
   font-size: var(--heading--h1);
@@ -274,6 +268,23 @@ li {
 .bold-text {
   font-weight: 700;
 }
+
+.hero-para {
+  font-size: var(--text-size--large);
+  font-weight: 300;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+.hero-para-intro {
+  font-size: var(--text-size--large);
+}
+
+#IntroPortrait img {
+  padding-top: 40px;
+}
+
+
 
 /* Text Banner / Marquee */
 .text-banner {
@@ -333,6 +344,8 @@ li {
 /* Case Studies Section */
 .case-studies {
   padding: 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Case Study Cards with Hover Animation */
@@ -348,7 +361,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 300px;
+  max-width: 250px;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
